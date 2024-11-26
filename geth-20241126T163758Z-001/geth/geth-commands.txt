@@ -1,0 +1,31 @@
+
+
+ geth --datadir chaindata init genesis.json
+ geth --datadir=./chaindata/
+_______________________________
+
+geth attach ipc:\\.\pipe\geth.ipc
+
+eth.accounts
+
+personal.newAccount()
+
+ eth.getBalance(eth.accounts[0])
+
+miner.start()
+
+miner.stop()
+
+eth.getBalance(eth.accounts[0])
+
+personal.unlockAccount(eth.accounts[0])
+
+eth.accounts
+
+personal.newAccount()
+
+eth.sendTransaction({from: eth.coinbase, to: eth.accounts[1],value:web3.toWei(10,"ether")})
+
+eth.getBlock("latest")
+
+ eth.getBlock(3)
